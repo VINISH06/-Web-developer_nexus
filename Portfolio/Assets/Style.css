@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* -------------------------------------------------------------- Variables ------------------------------------------------------------------------- */
+:root {
+  --font-weight: 600;
+  --font-size: 20px;
+  --width: 100%;
+  --height: 100vh;
+}
+
+/* -------------------------------------------------------------- Colors ------------------------------------------------------------------------- */
+:root {
+  --first-color: rgb(0, 0, 0, 0.5);
+  --second-color: #b900c0;
+  --second-shadow-color: rgb(185, 0, 192, 0.7);
+  --gradient: linear-gradient(to right, rgb(185, 0, 192) 10%, #fc00ff 100%);
+}
+
+/* -------------------------------------------------------------- Font-Style ------------------------------------------------------------------------- */
+:root {
+  --body-font: "Poppins", sans-serif;
+  --index: 10;
+}
+.loader {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150"><rect fill="%23FFF" width="100%" height="100%"/><path fill="none" stroke="%23FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>');
+}
+/* -------------------------------------------------------------- Universal ------------------------------------------------------------------------- */
+* {
+  scroll-behavior: smooth;
+  transition: 0.1s;
+}
+
+/* -------------------------------------------------------------- Body ------------------------------------------------------------------------- */
+body {
+  width: var(--width);
+  height: var(--height);
+  font-family: var(--body-font);
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  transition: 0.1s;
+  background-color: rgb(185, 0, 192, 0.3) !important;
+}
+/* -------------------------------------------------------------- Navbar ------------------------------------------------------------------------- */
+
+nav {
+  box-shadow: 0px 5px 8px var(--first-color);
+  width: var(--width);
+  top: 0;
+  left: 0;
+}
+.nav-item {
+  color: white !important;
+  border-bottom: 4px solid transparent;
+}
+.nav-item:hover {
+  border-bottom: 3px solid var(--second-color);
+  color: var(--second-color) !important;
+}
+header h1 {
+  color: var(--second-color);
+}
+/* -------------------------------------------------------------- Sections ------------------------------------------------------------------------- */
+
+section {
+  width: var(--width);
+  min-height: var(--height);
+  padding-top: 40px;
+}
+
+/* --------------------------------------------------------------------Home Sections----------------------------------- */
+#logo:hover {
+  -webkit-transform: rotate(360deg) translateZ(0);
+  transition: 0.1s;
+}
+#logo {
+  -webkit-transition: -webkit-transform 1s;
+}
+.text {
+  text-align: center;
+  width: 800px;
+  padding-top: 20%;
+  height: 100%;
+}
+#img1 {
+  width: 100%;
+  height: 100%;
+}
+#home button {
+  background-color: var(--second-color);
+  border: none;
+}
+#home button:hover {
+  background-color: black;
+  transition: 0.1s;
+  color: var(--second-color);
+}
+#home h1 {
+  font-size: 40px;
+  color: var(--second-color);
+}
+
+#home .container-fluid {
+  height: 100%;
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social {
+  margin-top: 40px;
+}
+/* -------------------------------------------------------------- About-Section ------------------------------------------------------------------------- */
+
+#about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* -------------------------------------------------------------- Skills-Section ------------------------------------------------------------------------- */
+
+i {
+  cursor: pointer;
+  margin: 15px;
+  color: var(--second-color);
+}
+.row i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------------- Project-Section ------------------------------------------------------------------------- */
+.slider {
+  width: var(--width);
+}
+.carousel-item {
+  height: 800px;
+}
+.card img {
+  height: 400px;
+  width: var(--width);
+  object-fit: contain;
+}
+
+.card-body p {
+  height: 300px;
+}
+.card-body {
+  width: 100%;
+  text-align: center;
+}
+/* -------------------------------------------------------------- Contact-Section ------------------------------------------------------------------------- */
+.contact {
+  width: var(--width);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact .btn {
+  width: 150px;
+  background-color: var(--second-color) !important;
+  margin-top: 30px;
+  border: none;
+  margin-bottom: 5%;
+  text-decoration: none !important;
+  color: white;
+}
+.btn:hover {
+  background-color: black !important;
+  color: #b900c0 !important;
+  transition: 0.1s;
+}
+
+/* -------------------------------------------------------------- MediaQuery -Section ------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #home .container-fluid {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0%;
+  }
+  .text {
+    height: 200px;
+    margin-top: 60px;
+    padding: 0%;
+    margin-bottom: 60px;
+  }
+  .text h1 {
+    font-size: 25px !important;
+  }
+  section {
+    overflow: hidden;
+  }
+}
